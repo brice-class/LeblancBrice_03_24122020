@@ -1,0 +1,174 @@
+:root{
+    --couleurPrimaire: #9356DC;
+    --couleurSecondaire: #FF79DA;
+    --couleurSecondaire: #99E2D0;
+}
+
+
+body{
+    font-family: "Roboto", "sans-serif";
+    margin: 0px;
+  }
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+        width: 150px;
+        margin-bottom: 10px;
+    }
+    input{
+        width: 100%;
+        height: 40px;
+        font-weight: bold;
+        text-align: center;
+        background-color:rgba(230, 225, 225, 0.979);
+        border: rgb(179, 178, 178) 1px solid;
+        box-shadow: inset 0px 3px 3px rgb(207, 206, 206);
+    }
+}
+
+
+#introduction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(231, 231, 231,0.8);
+    padding-bottom: 20px;
+    h2{
+        margin-bottom: 0px;
+    }
+    button{
+        height: 40px;
+        width: 200px;
+        color: white;
+        border-radius: 25px;
+        background: rgb(255,121,218);
+        background: linear-gradient(171deg, rgba(255,121,218,1) 12%, rgba(147,86,220,1) 66%, rgba(147,86,220,1) 100%);
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 400ms;
+        &:hover{
+            transform: scale(1.15);
+        }
+    }
+  }
+#tuto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    li{
+        background: rgb(219, 219, 219);
+        margin-bottom: 20px;
+        border-radius: 15px;
+        padding: 15px 30px 15px 0px;
+        list-style-type: none;
+        .number{
+            background: var(--couleurPrimaire) ;
+            border-radius: 25px;
+            margin-right: 30px ;
+            padding: 3px 7px;
+            margin-left: -8px;
+        }
+        i{
+            color: grey;
+            margin-right: 15px;
+        }
+
+    }
+}
+.title-card{
+    width: 95%;
+}
+#choix{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .card{
+        align-items: center;
+        width: 350px;
+        border: 0px black solid;
+        border-radius: 15px;
+        box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+        img{
+           width: 350px;
+           height: 200px;
+           object-fit: cover;
+           margin-bottom: 5px;
+           border-radius: 15px 15px 0px 0px;
+        }
+
+        .card-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 2%;
+
+            p{
+                margin: 0px 0px 0px 5px;
+                font-weight: bold;
+            }
+            span{
+                margin: 0px 0px 0px 5px;
+            }
+        }        
+}
+
+
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 5px 0px;
+       h2{
+           font-family: "Shrikhand","sans-serif";
+           margin-left: 35px;
+       }
+       li{
+           list-style-type: none;
+           margin-bottom: 10px;
+       }
+  }
+
+
+
+.heart path{
+    fill: transparent;
+    stroke: 10;
+    stroke-dasharray: 105px;
+    stroke-dashoffset: 105px;
+    animation: anim 6s ease forwards;    
+} 
+@keyframes anim {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+.heart:hover path{
+    cursor: pointer;
+    animation: animate-heart 2s linear forwards
+}
+@keyframes animate-heart{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 105;
+    }
+    80%{
+        stroke-dashoffset: 210;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 210;
+        fill: rgb(255,121,218);
+    }
+}
+ /*./dart-sass/sass sass/style.scss style.css --watch*/
