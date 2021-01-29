@@ -9,6 +9,19 @@
 body{
     font-family: "Roboto", "sans-serif";
     margin: 0px;
+    button{
+        height: 40px;
+        width: 200px;
+        color: white;
+        border-radius: 25px;
+        background: rgb(255,121,218);
+        background: linear-gradient(171deg, rgba(255,121,218,1) 12%, rgba(147,86,220,1) 66%, rgba(147,86,220,1) 100%);
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 400ms;
+        &:hover{
+            transform: scale(1.15);
+        }
   }
 
 header{
@@ -42,19 +55,7 @@ header{
     h2{
         margin-bottom: 0px;
     }
-    button{
-        height: 40px;
-        width: 200px;
-        color: white;
-        border-radius: 25px;
-        background: rgb(255,121,218);
-        background: linear-gradient(171deg, rgba(255,121,218,1) 12%, rgba(147,86,220,1) 66%, rgba(147,86,220,1) 100%);
-        transform: scale(1);
-        transition-property: transform;
-        transition-duration: 400ms;
-        &:hover{
-            transform: scale(1.15);
-        }
+    
     }
   }
 #tuto{
@@ -160,8 +161,8 @@ footer{
     border-radius: 30px 30px 0px 0px ;
     box-sizing: border-box;
     margin-top: -30px;
-    background-color: white;
-    webkit-transform: translate(0px, -50px);
+    background-color: rgb(224, 224, 224);
+    -webkit-transform: translate(0px, -50px);
     transform: translate(0px, -50px);
     .menuTitle{
         display: flex;
@@ -171,11 +172,42 @@ footer{
         border-radius: 25px 25px 0px 0px ;
     }
     .plat{
-        
+        opacity: 0.8;
+        margin-left: 20px;
     }
+    .element{
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 10px 20px 10px;
+        background-color: white;
+        border: solid 0px;
+        border-radius: 20px;
+        padding: 5px 10px;
+        -webkit-box-shadow: -1px 2px 17px -6px #000000; 
+        box-shadow: -1px 2px 17px -6px #000000;
+        .description{
+            margin-bottom: 7px;
+            p{
+                margin-bottom: 3px;
+                font-weight: bold;
+            }
+            span{
+                opacity: 0.9;
+            }
+        }
+        .price{
+            display: flex;
+            align-items: flex-end;
+            font-weight: bold;
+            padding-top: 20px;
+        }
+    }
+
 }
 
-
+.end-menu{
+    text-align: center;
+}
 
 /*animation*/
 
@@ -195,7 +227,7 @@ footer{
     cursor: pointer;
     animation: animate-heart 2s linear forwards
 }
-@keyframes animate-heart{
+@-webkit-keyframes animate-heart{
     0%{
         stroke-dashoffset: 0;
     }
