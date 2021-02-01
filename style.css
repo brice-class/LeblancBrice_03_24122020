@@ -1,7 +1,7 @@
 :root {
   --couleurPrimaire: #9356DC;
   --couleurSecondaire: #FF79DA;
-  --couleurSecondaire: #99E2D0;
+  --couleurtertiaire: #99E2D0;
 }
 
 /*acceuil*/
@@ -65,6 +65,9 @@ header input {
   align-items: flex-start;
   background-color: white;
   justify-content: flex-start;
+}
+#tuto h2 {
+  margin-left: 45px;
 }
 #tuto li {
   background: #f0f0f0;
@@ -265,6 +268,42 @@ footer i {
   100% {
     stroke-dashoffset: 210;
     fill: #ff79da;
+  }
+}
+/*loading*/
+.lds-hourglass {
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  right: auto;
+}
+
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  z-index: 50;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color: var(--couleurSecondaire) var(--couleurPrimaire);
+  animation: lds-hourglass 3.2s ease forwards;
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
   }
 }
 /*./dart-sass/sass sass/style.scss style.css --watch*/
