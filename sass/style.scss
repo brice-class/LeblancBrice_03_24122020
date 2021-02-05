@@ -180,16 +180,17 @@ header{
     }
     .element{
         display: flex;
-        justify-content: space-between;
         margin: 0px 10px 20px 10px;
         background-color: white;
         border: solid 0px;
         border-radius: 20px;
-        padding: 5px 10px;
+        overflow: hidden;       
         -webkit-box-shadow: -1px 2px 17px -6px #000000; 
         box-shadow: -1px 2px 17px -6px #000000;
         .description{
             margin-bottom: 7px;
+            width: 275px;
+            margin-left: 10px;
             p{
                 margin-bottom: 3px;
                 font-weight: bold;
@@ -198,14 +199,42 @@ header{
                 opacity: 0.9;
             }
         }
-        .price{
+        .price-check{
             display: flex;
-            align-items: flex-end;
-            font-weight: bold;
-            padding-top: 20px;
+            justify-content: center;
+            width:100px;
+	        height:50px;
+            transition: all 500ms ease-in-out;
+            .price{
+                position: relative;
+                margin-top: 10px;
+                left: 40px;
+            }
+            .check{.
+                display: flex;
+                height: 65px;
+                width: 40px;
+                padding: 20px 0px 5px 15px;
+                border: solid 0px;
+                border-radius: 0 20px 20px 0;
+                background-color: var(--couleurtertiaire);
+                position:relative;
+                left: 60px;
+                transition: 2000ms;
+                i{
+                    color: white;
+                }
+            }
         }
     }
 }
+
+
+
+
+
+
+
 .end-menu{
     text-align: center;
     margin-top: 30px;
@@ -214,6 +243,11 @@ header{
         border: 0px;
     }
 }
+
+
+
+
+
 
 footer{
     background-color: black;
@@ -269,7 +303,24 @@ footer{
     }
 }
 
-/*loading*/ 
+.element:hover .price-check{
+	transform: translate(-50px,0);
+		
+}
+
+
+/*loading
+
+.test{
+    width: 100%;
+    height: 100vh;
+    background-color: #4a6022c7;
+    transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    z-index: 10;
+    position: absolute;
+}
+
 .lds-hourglass {
     display: inline-block;
     position: fixed;
@@ -302,6 +353,6 @@ footer{
     100% {
       transform: rotate(1800deg);
     }
-  }
+  }*/
 
  /*./dart-sass/sass sass/style.scss style.css --watch*/
