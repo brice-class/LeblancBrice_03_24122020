@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --couleurPrimaire: #9356DC;
   --couleurSecondaire: #FF79DA;
@@ -189,9 +190,22 @@ body #introduction h2 {
   opacity: 0.8;
   margin-left: 20px;
 }
+.menu .plat h5 {
+  margin-bottom: 5px;
+}
+.menu .plat::after {
+  content: "";
+  background-color: #99e2d0;
+  width: 35px;
+  height: 2px;
+  display: block;
+  -webkit-animation: apparition 1.3s ease-out 0.2s;
+  animation: apparition 1.3s ease-out 0.2s;
+}
 .menu .element {
   display: flex;
-  margin: 0px 10px 20px 10px;
+  margin: 10px 10px 10px 10px;
+  /*ajusté les marge pour etre conforme a la maquette */
   background-color: white;
   border: solid 0px;
   border-radius: 20px;
@@ -275,7 +289,7 @@ footer i {
 }
 
 /*LOADER*/
-.section {
+.spinner {
   background-color: #16a085;
   position: absolute;
   top: 0%;
@@ -303,7 +317,7 @@ footer i {
   top: 0;
   width: 10px;
   height: 30px;
-  background-color: #fff;
+  background-color: #9356DC;
   -webkit-animation: grow 1s linear -0.5s infinite;
   animation: grow 1s linear -0.5s infinite;
 }
@@ -316,7 +330,7 @@ footer i {
   top: 0;
   width: 10px;
   height: 30px;
-  background-color: #fff;
+  background-color: #FF79DA;
   -webkit-animation: grow 1s linear infinite;
   animation: grow 1s linear infinite;
 }
@@ -329,7 +343,7 @@ footer i {
   top: 0;
   width: 10px;
   height: 30px;
-  background-color: #fff;
+  background-color: #99E2D0;
   -webkit-animation: grow 1s linear -0.66s infinite;
   animation: grow 1s linear -0.66s infinite;
 }
@@ -402,51 +416,6 @@ footer i {
   transform: translate(-50px, 0);
 }
 
-/*loading
-
-.test{
-    width: 100%;
-    height: 100vh;
-    background-color: #4a6022c7;
-    transition: background-color 1s ease-out;
-    -moz-transition: background-color 1s ease-out;
-    z-index: 10;
-    position: absolute;
-}
-
-.lds-hourglass {
-    display: inline-block;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    right: auto;
-  }
-  .lds-hourglass:after {
-    content: " ";
-    display: block;
-    z-index: 50;
-    border-radius: 50%;
-    width: 0;
-    height: 0;
-    margin: 8px;
-    box-sizing: border-box;
-    border: 32px solid #fff;
-    border-color: var(--couleurSecondaire) var(--couleurPrimaire);
-    animation: lds-hourglass 3.2s ease forwards;
-  }
-  @keyframes lds-hourglass {
-    0% {
-      transform: rotate(0);
-      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    }
-    50% {
-      transform: rotate(900deg);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    100% {
-      transform: rotate(1800deg);
-    }
-  }*/
 /*./dart-sass/sass sass/style.scss style.css --watch*/
 
 /*# sourceMappingURL=style.css.map */
