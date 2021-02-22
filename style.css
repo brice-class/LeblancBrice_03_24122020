@@ -1,10 +1,4 @@
 @charset "UTF-8";
-:root {
-  --couleurPrimaire: #9356DC;
-  --couleurSecondaire: #FF79DA;
-  --couleurtertiaire: #99E2D0;
-}
-
 /*acceuil*/
 body {
   font-family: "Roboto", "sans-serif";
@@ -42,7 +36,7 @@ body header {
 }
 body header img {
   width: 150px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 body header input {
   width: 100%;
@@ -89,7 +83,7 @@ body #introduction h2 {
   font-weight: bold;
 }
 #tuto li .number {
-  background: var(--couleurPrimaire);
+  background: #9356DC;
   border-radius: 25px;
   margin-right: 30px;
   padding: 3px 7px;
@@ -189,13 +183,14 @@ body #introduction h2 {
 .menu .plat {
   opacity: 0.8;
   margin-left: 20px;
+  -webkit-animation: fadein 3s forwards;
 }
 .menu .plat h5 {
   margin-bottom: 5px;
 }
 .menu .plat::after {
   content: "";
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   width: 35px;
   height: 2px;
   display: block;
@@ -213,6 +208,7 @@ body #introduction h2 {
   overflow: hidden;
   -webkit-box-shadow: -1px 2px 17px -6px #000000;
   box-shadow: -1px 2px 17px -6px #000000;
+  -webkit-animation: fadein 4s forwards;
 }
 .menu .element .description {
   margin-bottom: 7px;
@@ -249,7 +245,7 @@ body #introduction h2 {
   padding: 20px 0px 5px 15px;
   border: solid 0px;
   border-radius: 0 20px 20px 0;
-  background-color: var(--couleurtertiaire);
+  background-color: #99E2D0;
   position: relative;
   left: 60px;
   transition: 2000ms;
@@ -290,10 +286,10 @@ footer i {
 
 /*LOADER*/
 .spinner {
-  background-color: #16a085;
+  background-color: #99E2D0;
   position: absolute;
   top: 0%;
-  height: 800px;
+  height: 200vh;
   width: 100%;
   line-height: 700px;
   font-size: x-large;
@@ -343,7 +339,7 @@ footer i {
   top: 0;
   width: 10px;
   height: 30px;
-  background-color: #99E2D0;
+  background-color: #FF79DA;
   -webkit-animation: grow 1s linear -0.66s infinite;
   animation: grow 1s linear -0.66s infinite;
 }
@@ -416,6 +412,29 @@ footer i {
   transform: translate(-50px, 0);
 }
 
+.element:hover .fa-check-circle {
+  animation: rot 6s ease forwards;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(720deg);
+  }
+  100% {
+    transform: rotate(1440deg);
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*./dart-sass/sass sass/style.scss style.css --watch*/
 
 /*# sourceMappingURL=style.css.map */

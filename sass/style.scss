@@ -1,8 +1,8 @@
-:root{
-    --couleurPrimaire: #9356DC;
-    --couleurSecondaire: #FF79DA;
-    --couleurtertiaire: #99E2D0;
-}
+
+$Primaire: #9356DC;
+$Secondaire: #FF79DA;
+$tertiaire: #99E2D0;
+
 /*acceuil*/
 
 body{
@@ -39,7 +39,8 @@ header{
     background-color: white;
     img{
         width: 150px;
-        margin-bottom: 10px;
+        margin: 10px 0;
+    
     }
     input{
         width: 100%;
@@ -87,7 +88,7 @@ header{
         list-style-type: none;
         font-weight: bold;
         .number{
-            background: var(--couleurPrimaire) ;
+            background: $Primaire;
             border-radius: 25px;
             margin-right: 30px ;
             padding: 3px 7px;
@@ -189,13 +190,14 @@ header{
     .plat{
         opacity: 0.8;
         margin-left: 20px;
+        -webkit-animation: fadein 3s forwards;
         h5{
             margin-bottom: 5px;
         }
     }
     .plat::after{
         content: "";
-        background-color: #99e2d0;
+        background-color: $tertiaire;
         width: 35px;
         height: 2px;
         display: block;
@@ -212,6 +214,7 @@ header{
         overflow: hidden;       
         -webkit-box-shadow: -1px 2px 17px -6px #000000; 
         box-shadow: -1px 2px 17px -6px #000000;
+        -webkit-animation: fadein 4s forwards;
         .description{
             margin-bottom: 7px;
             width: 275px;
@@ -247,12 +250,13 @@ header{
                 padding: 20px 0px 5px 15px;
                 border: solid 0px;
                 border-radius: 0 20px 20px 0;
-                background-color: var(--couleurtertiaire);
+                background-color: $tertiaire;
                 position:relative;
                 left: 60px;
                 transition: 2000ms;
                 i{
                     color: white;
+                    
                 }
             }
         }
@@ -291,10 +295,10 @@ footer{
 /*LOADER*/
 
 .spinner{
-    background-color: #16a085;
+    background-color: $tertiaire;
     position: absolute;
     top: 0%;
-    height: 800px;
+    height: 200vh;
     width: 100%;
     line-height: 700px; 
     font-size: x-large;
@@ -340,7 +344,7 @@ footer{
     top: 0;
     width: 10px;
     height: 30px;
-    background-color: #99E2D0;
+    background-color: $Secondaire;
     -webkit-animation:grow 1s linear -.66s infinite;
     animation:grow 1s linear -.66s infinite;
   }
@@ -395,12 +399,31 @@ footer{
         fill: rgb(255,121,218);
     }
 }
+    
+
 
 .element:hover .price-check{
-	transform: translate(-50px,0);
-		
+	transform: translate(-50px,0);		
+}
+.element:hover .fa-check-circle{
+    animation: rot 6s ease forwards;
 }
 
+
+@keyframes rot{
+    0%{transform: rotate(0deg) ;}
+    50%{transform: rotate(720deg);}
+    100%{transform: rotate(1440deg);}
+}
+
+@-webkit-keyframes fadein{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 
  /*./dart-sass/sass sass/style.scss style.css --watch*/
