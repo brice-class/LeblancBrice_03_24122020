@@ -39,8 +39,7 @@ header{
     background-color: white;
     img{
         width: 150px;
-        margin: 10px 0;
-    
+        margin: 10px 0;   
     }
     input{
         width: 100%;
@@ -50,6 +49,11 @@ header{
         background-color:rgba(230, 225, 225, 0.979);
         border: rgb(179, 178, 178) 1px solid;
         box-shadow: inset 0px 3px 3px rgb(207, 206, 206);
+    }
+    .back{
+        position: absolute;
+        top: 10px;
+        left: 30px;
     }
 }
 #wrapper{
@@ -254,9 +258,10 @@ header{
                 position:relative;
                 left: 60px;
                 transition: 2000ms;
+                font-size: 20px;
                 i{
-                    color: white;
-                    
+                    color: white; 
+                    height: fit-content;                 
                 }
             }
         }
@@ -406,14 +411,15 @@ footer{
 	transform: translate(-50px,0);		
 }
 .element:hover .fa-check-circle{
-    animation: rot 6s ease forwards;
+    animation: rot 800ms  forwards;
+    animation-delay: 0s;
 }
 
 
 @keyframes rot{
-    0%{transform: rotate(0deg) ;}
-    50%{transform: rotate(720deg);}
-    100%{transform: rotate(1440deg);}
+    0%{transform: rotate(90deg) ;}
+    50%{transform: rotate(45deg);}
+    100%{transform: rotate(0deg);}
 }
 
 @-webkit-keyframes fadein{

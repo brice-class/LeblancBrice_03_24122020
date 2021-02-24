@@ -47,6 +47,11 @@ body header input {
   border: #b3b2b2 1px solid;
   box-shadow: inset 0px 3px 3px #cfcece;
 }
+body header .back {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+}
 body #wrapper {
   width: 100%;
 }
@@ -249,9 +254,11 @@ body #introduction h2 {
   position: relative;
   left: 60px;
   transition: 2000ms;
+  font-size: 20px;
 }
 .menu .element .price-check .check i {
   color: white;
+  height: fit-content;
 }
 
 .end-menu {
@@ -413,18 +420,19 @@ footer i {
 }
 
 .element:hover .fa-check-circle {
-  animation: rot 6s ease forwards;
+  animation: rot 800ms forwards;
+  animation-delay: 0s;
 }
 
 @keyframes rot {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(90deg);
   }
   50% {
-    transform: rotate(720deg);
+    transform: rotate(45deg);
   }
   100% {
-    transform: rotate(1440deg);
+    transform: rotate(0deg);
   }
 }
 @-webkit-keyframes fadein {
