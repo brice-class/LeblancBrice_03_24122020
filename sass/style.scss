@@ -1,4 +1,8 @@
 
+@import "libs/mixins.scss";
+
+
+
 $Primaire: #9356DC;
 $Secondaire: #FF79DA;
 $tertiaire: #99E2D0;
@@ -132,7 +136,8 @@ header{
         img{
            width: 350px;
            height: 200px;
-           object-fit: cover;
+           -o-object-fit: cover;
+              object-fit: cover;
            margin-bottom: 5px;
            border-radius: 15px 15px 0px 0px;
         }
@@ -182,7 +187,6 @@ header{
     box-sizing: border-box;
     margin-top: -30px;
     background-color: rgb(240, 240, 240);
-    -webkit-transform: translate(0px, -50px);
     transform: translate(0px, -50px);
     .menuTitle{
         display: flex;
@@ -215,10 +219,9 @@ header{
         border: solid 0px;
         border-radius: 20px;
         width: 350px;
-        overflow: hidden;       
-        -webkit-box-shadow: -1px 2px 17px -6px #000000; 
+        overflow: hidden; 
         box-shadow: -1px 2px 17px -6px #000000;
-        -webkit-animation: fadein 4s forwards;
+        /*animation: fadein 4s forwards;*/
         .description{
             margin-bottom: 7px;
             width: 275px;
@@ -261,6 +264,8 @@ header{
                 font-size: 20px;
                 i{
                     color: white; 
+                    height: -webkit-fit-content; 
+                    height: -moz-fit-content; 
                     height: fit-content;                 
                 }
             }
@@ -307,7 +312,8 @@ footer{
     width: 100%;
     line-height: 700px; 
     font-size: x-large;
-    animation: disparition 4s forwards ease-in-out;  
+    -webkit-animation: disparition 4s forwards ease-in-out;
+            animation: disparition 4s forwards ease-in-out;  
   }
   .loader{
     width: 50px;
@@ -354,16 +360,28 @@ footer{
     animation:grow 1s linear -.66s infinite;
   }
   
+  @-webkit-keyframes grow{
+    0% { -webkit-transform: scaleY(0); opacity:0;}
+    50% { -webkit-transform: scaleY(1); opacity:1;}
+    100% { -webkit-transform: scaleY(0);}
+  }
+  
   @keyframes grow{
     0% { -webkit-transform: scaleY(0); opacity:0;}
     50% { -webkit-transform: scaleY(1); opacity:1;}
     100% { -webkit-transform: scaleY(0);}
   }
 
+@-webkit-keyframes disparition{
+    0%{ opacity: 1; z-index: 100;}
+    80%{ opacity: 1; z-index: 100;}
+    100%{ opacity: 0; display: none; z-index:-1;}
+}
+
 @keyframes disparition{
-    0%{ -webkit-opacity: 1; z-index: 100;}
-    80%{ -webkit-opacity: 1; z-index: 100;}
-    100%{ -webkit-opacity: 0; display: none; z-index:-1;}
+    0%{ opacity: 1; z-index: 100;}
+    80%{ opacity: 1; z-index: 100;}
+    100%{ opacity: 0; display: none; z-index:-1;}
 }
 
 
@@ -379,6 +397,11 @@ footer{
     -webkit-animation: anim 6s ease forwards;
     animation: anim 6s ease forwards;    
 } 
+@-webkit-keyframes anim {
+    to{
+        stroke-dashoffset: 0;
+    }
+} 
 @keyframes anim {
     to{
         stroke-dashoffset: 0;
@@ -386,7 +409,8 @@ footer{
 }
 .heart:hover path{
     cursor: pointer;
-    animation: animate-heart 2s linear forwards;
+    -webkit-animation: animate-heart 2s linear forwards;
+            animation: animate-heart 2s linear forwards;
 }
 @-webkit-keyframes animate-heart{
     0%{
@@ -411,8 +435,17 @@ footer{
 	transform: translate(-50px,0);		
 }
 .element:hover .fa-check-circle{
-    animation: rot 800ms  forwards;
-    animation-delay: 0s;
+    -webkit-animation: rot 800ms  forwards;
+            animation: rot 800ms  forwards;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+}
+
+
+@-webkit-keyframes rot{
+    0%{transform: rotate(90deg) ;}
+    50%{transform: rotate(45deg);}
+    100%{transform: rotate(0deg);}
 }
 
 
@@ -421,8 +454,8 @@ footer{
     50%{transform: rotate(45deg);}
     100%{transform: rotate(0deg);}
 }
-
-@-webkit-keyframes fadein{
+/* APPARATION DES PLATS*/
+@keyframes fadein{
     from {
         opacity: 0;
     }
@@ -431,5 +464,9 @@ footer{
     }
 }
 
-
+@for $i from 1 through 5 {
+    .m-#{$i} {
+        animation: fadein $i * 1s forwards;
+    }
+}
  /*./dart-sass/sass sass/style.scss style.css --watch*/
