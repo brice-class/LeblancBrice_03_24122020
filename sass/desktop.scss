@@ -1,7 +1,11 @@
 .spinner{
     height: 100vh;
 }
-
+.wrapper img{
+    object-fit:cover;
+    height: 400px;
+    
+}
 #wrapper{
     display: flex;
     justify-content: space-around;
@@ -12,11 +16,31 @@
     width: 25%;
     background: white;
     border-radius: 50%;
+    position: relative;
+    animation: balance 10.7s ease infinite;
 }
 #tuto{
     width: 25%;
 }
-
+.menu{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .menuTitle{
+        width: 100%;
+       justify-content: center;
+       h2{
+           margin-right: 60px;
+       }
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+        align-items: center;
+        
+    }
+}
 #choix{
     flex-direction: row;
     flex-wrap: wrap;
@@ -29,14 +53,20 @@
     -webkit-filter: grayscale(0) blur(0px);
     filter: grayscale(0) blur(0px);
     -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    transition: all 0.5s infinite;
   }
    
   .card:hover{
-    width: 150px; /* on affiche l'image au carré */
+    width: 200px; /* on affiche l'image au carré */
     height: 250px;
     border-radius: 50%;  /* on arrondit l'image */
     -webkit-transform: rotate(360deg); /* rotation de l'image */
     transform: rotate(360deg);
   }
   
+
+  @keyframes balance{
+    from {left: 306px;}
+    50%  {left: -200px;}
+    to   {left: 306px;}
+  }
