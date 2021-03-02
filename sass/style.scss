@@ -84,12 +84,15 @@ header{
 #tuto{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     background-color: white;
     justify-content: flex-start;
     width: 100%;
     h2{
         margin-left: 45px;
+    }
+    ul{
+        padding-left: 0;
     }
     li{
         background: rgb(240, 240, 240);

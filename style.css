@@ -74,13 +74,16 @@ body #introduction h2 {
 #tuto {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   background-color: white;
   justify-content: flex-start;
   width: 100%;
 }
 #tuto h2 {
   margin-left: 45px;
+}
+#tuto ul {
+  padding-left: 0;
 }
 #tuto li {
   background: #f0f0f0;
