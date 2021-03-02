@@ -7,7 +7,6 @@ input {
 }
 
 .wrapper img {
-  object-fit: cover;
   height: 400px;
 }
 
@@ -19,6 +18,10 @@ input {
 }
 #wrapper .tuto__title {
   margin-bottom: 0px;
+}
+
+.title-card {
+  text-align: center;
 }
 
 #introduction {
@@ -49,8 +52,11 @@ input {
 .menu .content {
   display: flex;
   flex-direction: column;
-  width: 33%;
+  width: fit-content;
   align-items: center;
+}
+.menu .end-menu {
+  width: 100%;
 }
 
 #choix {
@@ -74,20 +80,9 @@ input {
 }
 
 .card:hover {
-  animation: flip 600ms forwards;
+  transform: scale(1.1);
 }
 
-@keyframes flip {
-  0% {
-    transform: rotateX(0deg);
-  }
-  50% {
-    transform: rotateX(90deg);
-  }
-  100% {
-    transform: rotateX(0deg);
-  }
-}
 /*./dart-sass/sass sass/desktop.scss desktop.css --watch*/
 
 /*# sourceMappingURL=desktop.css.map */
