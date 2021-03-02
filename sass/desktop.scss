@@ -10,6 +10,11 @@
     display: flex;
     justify-content: space-around;
     background-color: white;
+    height: 300px;
+    .tuto__title{
+        margin-bottom: 0px;
+    }
+    
 }
 
 #introduction{
@@ -45,6 +50,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+#title h2{
+    margin: 5px 0px 5px 35px;
 }
 
 .card{
@@ -57,12 +67,14 @@
   }
    
   .card:hover{
-    width: 200px; /* on affiche l'image au carré */
-    height: 250px;
-    border-radius: 50%;  /* on arrondit l'image */
-    -webkit-transform: rotate(360deg); /* rotation de l'image */
-    transform: rotate(360deg);
+   animation: flip 600ms forwards;
   }
+
+@keyframes flip{
+    0% { transform: rotateX(0deg);}
+    50% {transform: rotateX(90deg);}
+    100% {transform: rotateX(0deg);}
+}
   
 
   @keyframes balance{
@@ -70,3 +82,5 @@
     50%  {left: -200px;}
     to   {left: 306px;}
   }
+
+  /*./dart-sass/sass sass/desktop.scss desktop.css --watch*/

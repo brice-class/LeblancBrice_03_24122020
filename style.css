@@ -52,6 +52,9 @@ body header .back {
   top: 10px;
   left: 30px;
 }
+body header .back i {
+  color: black;
+}
 body #wrapper {
   width: 100%;
 }
@@ -239,7 +242,7 @@ body #introduction h2 {
 }
 .menu .element .price-check .price {
   position: relative;
-  margin-top: 10px;
+  margin-top: 20px;
   left: 40px;
 }
 .menu .element .price-check .check {
@@ -321,7 +324,7 @@ footer i {
   left: 15px;
   top: 0;
   width: 10px;
-  height: 30px;
+  height: 100px;
   background-color: #9356DC;
   -webkit-animation: grow 1s linear -0.5s infinite;
   animation: grow 1s linear -0.5s infinite;
@@ -462,6 +465,12 @@ footer i {
   animation-delay: 0s;
 }
 
+.element:hover .description p {
+  width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @-webkit-keyframes rot {
   0% {
     transform: rotate(90deg);
@@ -488,9 +497,11 @@ footer i {
 @keyframes fadein {
   from {
     opacity: 0;
+    transform: translate(0px, 0px);
   }
   to {
     opacity: 1;
+    transform: translate(0px, -20px);
   }
 }
 .m-1 {
