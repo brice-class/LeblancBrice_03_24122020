@@ -329,8 +329,7 @@ footer{
     -webkit-animation: disparition 4s forwards ease-in-out;
             animation: disparition 4s forwards ease-in-out;
     #loa{
-        display: inline-block;
-        transform: translate(50px,50px);
+        display: none;
     }          
   }
   .loader{

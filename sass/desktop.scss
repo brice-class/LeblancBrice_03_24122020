@@ -82,7 +82,10 @@ input{
   }
 
 
-  
+  #loa{
+    display: inline-block !important;
+    transform: translate(50px,50px);
+}        
 
   
   /*./dart-sass/sass sass/desktop.scss desktop.css --watch*/

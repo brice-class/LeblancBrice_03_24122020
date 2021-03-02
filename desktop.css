@@ -83,6 +83,11 @@ input {
   transform: scale(1.1);
 }
 
+#loa {
+  display: inline-block !important;
+  transform: translate(50px, 50px);
+}
+
 /*./dart-sass/sass sass/desktop.scss desktop.css --watch*/
 
 /*# sourceMappingURL=desktop.css.map */
