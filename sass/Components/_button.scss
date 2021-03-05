@@ -1,9 +1,10 @@
+/*COMPONENT BUTTON*/
+
 button{
     height: 40px;
     width: 200px;
     color: white;
     border-radius: 25px; 
-    background: rgb(255,121,218);
     background: linear-gradient(180deg, rgba(255,121,218,1) 15%, rgba(147,86,220,1) 66%, rgba(147,86,220,1) 100%);
     transform: scale(1);
     transition-property: transform;
@@ -12,5 +13,7 @@ button{
     border: 0px;   
     &:hover{
         transform: scale(1.15);
+        box-shadow: -1px 2px 17px -6px #000000;
+        background: linear-gradient(180deg, rgb(250, 142, 219) 15%, rgb(154, 101, 219) 66%, rgb(169, 129, 219) 100%);
     }
 }

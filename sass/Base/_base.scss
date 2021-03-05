@@ -1,6 +1,9 @@
+/*STRUCTURE DE BASE*/
+
 body{
     font-family: "Roboto", "sans-serif";
     margin: 0px;
+    box-sizing: border-box;
     background-color: rgb(240, 240, 240);
     display:flex;
     flex-direction: column;

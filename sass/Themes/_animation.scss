@@ -1,4 +1,6 @@
-/*animation*/
+/*ANIMATION*/
+
+/*HEART*/
 
 .heart path{
     fill: transparent;   
@@ -11,7 +13,6 @@
         stroke-dashoffset: 0;
     }
 } 
-
 .heart:hover path{
     cursor: pointer;
     -webkit-animation: animate-heart 2s linear forwards;
@@ -35,6 +36,7 @@
 }
     
 /*CHECK*/
+
 .element:hover .description p{ /*permet de transformer le texte depassant en points de suspension*/
     width: 220px;
     overflow: hidden;
@@ -61,7 +63,7 @@
     100% {
       transform: rotate(0deg);
     }
-  }
+}
 
 /* APPARATION DES PLATS*/
 @keyframes fadein{

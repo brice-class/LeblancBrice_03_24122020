@@ -1,7 +1,9 @@
 @charset "UTF-8";
+/*STRUCTURE DE BASE*/
 body {
   font-family: "Roboto", "sans-serif";
   margin: 0px;
+  box-sizing: border-box;
   background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
@@ -11,12 +13,12 @@ body {
   padding: 0;
 }
 
+/*COMPONENT BUTTON*/
 button {
   height: 40px;
   width: 200px;
   color: white;
   border-radius: 25px;
-  background: #ff79da;
   background: linear-gradient(180deg, #ff79da 15%, #9356dc 66%, #9356dc 100%);
   transform: scale(1);
   transition-property: transform;
@@ -26,8 +28,11 @@ button {
 }
 button:hover {
   transform: scale(1.15);
+  box-shadow: -1px 2px 17px -6px #000000;
+  background: linear-gradient(180deg, #fa8edb 15%, #9a65db 66%, #a981db 100%);
 }
 
+/*HEADER*/
 header {
   display: flex;
   flex-direction: column;
@@ -54,6 +59,8 @@ header input {
   border: #b3b2b2 1px solid;
   box-shadow: inset 0px 3px 3px #cfcece;
   color: black;
+  padding: 0;
+  margin: 0;
 }
 header .back {
   position: absolute;
@@ -69,6 +76,7 @@ header .back i {
     left: 41% !important;
   }
 }
+/*FOOTER*/
 footer {
   background-color: black;
   color: white;
@@ -94,6 +102,7 @@ footer i {
   margin-right: 10px;
 }
 
+/*PAGE D'ACCEUIL*/
 #wrapper {
   width: 100%;
 }
@@ -265,7 +274,7 @@ footer i {
     -webkit-filter: grayscale(0) blur(0px);
     filter: grayscale(0) blur(0px);
     -webkit-transition: all 0.5s ease;
-    transition: transform 0.5s;
+    transition: all 0.5s forwards;
   }
 
   .card:hover {
@@ -517,7 +526,8 @@ footer i {
     margin: 5px 0px 5px 35px;
   }
 }
-/*animation*/
+/*ANIMATION*/
+/*HEART*/
 .heart path {
   fill: transparent;
   stroke-dasharray: 105px;
@@ -567,7 +577,6 @@ footer i {
 
 .element:hover .fa-check-circle {
   /* rotation de l'icone validation*/
-  -webkit-animation: rot 800 forwards;
   animation: rot 800ms forwards;
 }
 
