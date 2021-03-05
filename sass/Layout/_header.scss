@@ -1,0 +1,41 @@
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: white;
+    .map{
+        font-size: small;
+        position: absolute;
+        top: 60px;
+        left: 33%;
+    }
+    img{
+        width: 150px;
+        margin: 10px 0;   
+    }
+    input{
+        width: 99.7%;
+        height: 40px;
+        font-weight: bold;
+        text-align: center;
+        background-color:rgba(230, 225, 225, 0.979);
+        border: rgb(179, 178, 178) 1px solid;
+        box-shadow: inset 0px 3px 3px rgb(207, 206, 206);
+        color: black;
+    }
+    .back{
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        i{
+            color: black;
+        }
+    }
+}
+@media screen and (min-width: 770px)
+{
+    .map{
+        left: 41% !important;
+    }
+}
