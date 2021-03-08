@@ -274,7 +274,7 @@ footer i {
     -webkit-filter: grayscale(0) blur(0px);
     filter: grayscale(0) blur(0px);
     -webkit-transition: all 0.5s ease;
-    transition: all 0.5s forwards;
+    transition: all 0.5s ease;
   }
 
   .card:hover {
@@ -323,6 +323,7 @@ footer i {
   opacity: 0.8;
   margin-left: 20px;
   -webkit-animation: fadein 3s forwards;
+  animation: fadein 3s forwards;
 }
 .menu .plat h5 {
   margin-bottom: 5px;
