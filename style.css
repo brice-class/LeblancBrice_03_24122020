@@ -502,7 +502,35 @@ footer i {
     -webkit-transform: scaleY(0);
   }
 }
+@keyframes grow {
+  0% {
+    -webkit-transform: scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+  }
+}
 @-webkit-keyframes disparition {
+  0% {
+    opacity: 1;
+    z-index: 100;
+  }
+  80% {
+    opacity: 1;
+    z-index: 100;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+@keyframes disparition {
   0% {
     opacity: 1;
     z-index: 100;
@@ -541,6 +569,11 @@ footer i {
     stroke-dashoffset: 0;
   }
 }
+@keyframes anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 .heart:hover path {
   cursor: pointer;
   -webkit-animation: animate-heart 2s linear forwards;
@@ -548,6 +581,22 @@ footer i {
 }
 
 @-webkit-keyframes animate-heart {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 105;
+  }
+  80% {
+    stroke-dashoffset: 210;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 210;
+    fill: #FF79DA;
+  }
+}
+@keyframes animate-heart {
   0% {
     stroke-dashoffset: 0;
   }

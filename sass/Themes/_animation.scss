@@ -13,6 +13,11 @@
         stroke-dashoffset: 0;
     }
 } 
+@keyframes anim {
+    to{
+        stroke-dashoffset: 0;
+    }
+} 
 .heart:hover path{
     cursor: pointer;
     -webkit-animation: animate-heart 2s linear forwards;
@@ -34,7 +39,22 @@
         fill: $Secondaire;
     }
 }
-    
+@keyframes animate-heart{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 105;
+    }
+    80%{
+        stroke-dashoffset: 210;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 210;
+        fill: $Secondaire;
+    }
+}   
 /*CHECK*/
 
 .element:hover .description p{ /*permet de transformer le texte depassant en points de suspension*/
