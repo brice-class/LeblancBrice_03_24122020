@@ -24,6 +24,7 @@
     width: 100%;
     h2{
         margin-left: 45px;
+        align-self: flex-start;
     }
     ul{
         padding-left: 0;
@@ -158,6 +159,10 @@
         width: 45%;
         justify-content: center;
         align-items: center;
+        h2{
+            align-self: center;
+            margin-left: 0;
+        }
     }
     .card{
         width: 200px;
