@@ -132,8 +132,7 @@
         height: 300px;
         .tuto__title{
             margin-bottom: 0px;
-        }
-        
+        }       
     }
     #choix{
         flex-direction: row;
@@ -141,10 +140,8 @@
         justify-content: space-around;
         margin-bottom: 40px;
     }
-    .wrapper img{
-        
-        height: 400px;
-        
+    .wrapper img{   
+        height: 400px;   
     }
     .title-card{
         text-align: center;
@@ -171,13 +168,10 @@
         filter: grayscale(0) blur(0px);
         -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease;
-      }
-       
+      }      
       .card:hover{
        transform: scale(1.1);
-      }
-    
-    
+      }   
       #loader__title{
         display: inline-block !important;
         transform: translate(50px,50px);
