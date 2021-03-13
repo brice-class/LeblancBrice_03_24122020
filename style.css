@@ -196,6 +196,7 @@ footer i {
   right: 5%;
   background-color: #8edfca;
   color: green;
+  border-radius: 3px;
 }
 #choix .card .new p {
   margin: 7px 10px;
@@ -599,7 +600,7 @@ footer i {
   }
   100% {
     stroke-dashoffset: 210;
-    fill: #FF79DA;
+    fill: url(#heart_degrade);
   }
 }
 @keyframes animate-heart {
@@ -615,7 +616,7 @@ footer i {
   }
   100% {
     stroke-dashoffset: 210;
-    fill: #FF79DA;
+    fill: url(#heart_degrade);
   }
 }
 /*CHECK*/

@@ -36,7 +36,7 @@
     }
     100%{
         stroke-dashoffset: 210;
-        fill: $Secondaire;
+        fill:url(#heart_degrade);
     }
 }
 @keyframes animate-heart{
@@ -52,7 +52,7 @@
     }
     100%{
         stroke-dashoffset: 210;
-        fill: $Secondaire;
+        fill: url(#heart_degrade);
     }
 }   
 /*CHECK*/
